@@ -1,5 +1,5 @@
 .main-wrapper {
-    background-color: rgb(188, 227, 227);
+    background-color: rgb(230, 233, 221);
     /* width : 25% ; 
     height : 100vh  ; */
     display : grid ; 
@@ -8,22 +8,43 @@
 
 }
 .main-page {
-    background-color: aquamarine;
+    background-color: rgb(230, 233, 221);
     display : grid ; 
+    /* grid-template-columns : 7fr 3fr; */
     grid-template-areas: 
-    "top top"
-    "row1 row2"
-    "row3 row4";
-    
+    "upper upper upper"
+    "projects projects side-stuff"
+    "projects projects side-stuff";
+    ;
      margin-left: 10px;
     height : 100vh;
     
 }
+.projects {
+    background-color: rgb(230, 233, 221);
+    display : grid ; 
+    grid-template-areas: 
+    "row1 row2"
+    "row3 row4"
+    "row5 row6"
+    ;
+    grid-area: projects; 
+}
 .side-bar{
     background-color: black;
+    border-radius : 15px ;   
+}
+.side-stuff{
+    background-color: rgb(230, 233, 221);
+    border-radius : 15px ; 
+    grid-area: side-stuff;
+    display : grid ;
+    grid-template-areas:
+     "element1 "
+    "element2";
 }
 .top{
-    background-color: blueviolet;
+    background-color: rgb(230, 233, 221);
     border: solid black;
     grid-area : top ; 
     margin-bottom: 20px ;
@@ -31,17 +52,97 @@
 .row1{
     grid-area: row1 ;
     background-color: brown;
-    
+    border-radius : 15px ; 
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 .row4{
     grid-area: row4 ;
     background-color: brown;
+    border-radius : 15px ; 
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 .row3{
     grid-area: row3 ;
-    background-color: brown;
+    background-color: rgb(241, 173, 173);
+    border-radius : 15px ; 
+     margin-left: 10px;
+     margin-bottom: 10px;
 }
 .row2{
     grid-area: row2 ;
-    background-color: brown;
+    background-color: rgb(241, 173, 173);
+    border-radius : 15px ; 
+     margin-left: 10px;
+     margin-bottom: 10px;
 }
+.row5{
+    grid-area: row5 ; 
+    background-color: brown;
+    border-radius : 15px ; 
+     margin-left: 10px;
+     margin-bottom: 10px;  
+}
+.row6{
+    grid-area: row6 ; 
+    background-color: rgb(241, 173, 173);
+    border-radius : 15px ; 
+     margin-left: 10px;
+     margin-bottom: 10px; 
+}
+.element1{
+    grid-area: element1 ;
+    background-color: rgb(171, 42, 42);
+     border-radius : 15px ; 
+     margin-left: 10px;
+     margin-bottom: 10px;
+      margin-top: 10px;
+     margin-right : 10px;
+}
+.element2{
+    grid-area: element2 ;
+    background-color: rgb(159, 26, 26);
+     border-radius : 15px ; 
+     margin-left: 10px;
+     margin-bottom: 10px;
+     margin-top: 10px;
+     margin-right : 10px;
+}
+.upper{
+    display : grid ; 
+    grid-area: upper ;
+    background-color: rgb(230, 233, 221);
+    grid-template-areas:
+    "search-bar search-bar "
+    "avatar message ";
+}
+.search-bar{
+    background-color: rgb(230, 233, 221);
+    border-radius : 15px ; 
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right : 10px;
+    grid-area: search-bar ;
+    align-items: center;
+}
+.avatar{
+    background-color: rgb(29, 36, 6);
+    border-radius : 15px ; 
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right : 10px;
+    grid-area: avatar ;
+}
+.message{
+    background-color: rgb(142, 144, 135);
+    border-radius : 15px ; 
+    margin-left: 10px;
+    margin-bottom: 10px;
+    grid-area: message ;
+    margin-top: 10px;
+    margin-right : 10px;
+}
+
