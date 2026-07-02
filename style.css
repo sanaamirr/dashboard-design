@@ -114,8 +114,10 @@
     grid-area: upper ;
     background-color: rgb(230, 233, 221);
     grid-template-areas:
-    "search-bar search-bar "
-    "avatar message ";
+    "search-bar search-bar search-bar search-bar search-bar search-bar search-bar search-bar search-bar search-bar"
+    "avatar message message message message message message message message message";
+    /* place-items: center; */
+    border : solid black ;
 }
 .search-bar{
     background-color: rgb(230, 233, 221);
@@ -125,24 +127,74 @@
     margin-top: 10px;
     margin-right : 10px;
     grid-area: search-bar ;
-    align-items: center;
+    display : grid ; 
+    place-items: center;
+    /* border : solid black ; */
+    position: relative ;
+    border : solid black ; 
 }
 .avatar{
-    background-color: rgb(29, 36, 6);
+    background-color: rgb(230, 233, 221);
     border-radius : 15px ; 
     margin-left: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
     margin-right : 10px;
     grid-area: avatar ;
+    height : 70px ; 
+    /* border : solid black ; */
+    position : relative ;   
+}
+.ava-img{
+    position : absolute ; 
+    top : 50% ; 
+    left : 50% ; 
+    transform : translate(-50% , -50%) ;
 }
 .message{
-    background-color: rgb(142, 144, 135);
+    background-color: rgb(230, 233, 221);
     border-radius : 15px ; 
     margin-left: 10px;
     margin-bottom: 10px;
     grid-area: message ;
     margin-top: 10px;
     margin-right : 10px;
+    height : 70px ; 
+    /* border : solid black ; */
 }
-
+/* .search-input{
+    width : auto; 
+    height : auto ; 
+    border-radius : 15px ; 
+    border : solid black ; 
+    background-color: rgb(230, 233, 221);
+    align-items: center;
+} */
+.search {
+    position : absolute ;
+    top : 5%;
+    transform : translateX(-50%) ;
+    width : 500px  ;
+    display : grid ;
+    place-items: center;
+    background-color: rgb(0, 0, 0); 
+}
+.search input {
+    width : 100% ; 
+    height : 40px ; 
+    border-radius : 15px ; 
+    border : solid black ; 
+    background-color: rgb(230, 233, 221);
+    align-items: center;
+}
+.avatar image{
+    height : 15px ; 
+    width : 15px ; 
+    border-radius : 50% ;
+    border : solid black ;
+}
+.message {
+  font-family: "Chelsea Market", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
